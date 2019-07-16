@@ -1,0 +1,4 @@
+XTerm*background: #1f1f1f
+XTerm*font: fixed
+XTerm*boldFont: fixed
+XTerm*boldMode: false
