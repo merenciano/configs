@@ -1,0 +1,8 @@
+xterm*font: -misc-fixed-*-*-*-*-15-*-*-*-*-*-*-*
+xterm*boldMode: false
+xterm*foreground: rgb:a8/a8/a8
+xterm*background: rgb:12/12/12
+
+xterm*colorBDMode: true
+xterm*colorBD: rgb:fc/fc/fc
+xterm*allowBoldFonts: false
