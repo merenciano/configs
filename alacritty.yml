@@ -1,0 +1,99 @@
+
+env:
+    TERM: xterm-256color
+
+window:
+    padding:
+        x: 0
+        y: 0
+
+    decorations: full
+
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # Font family
+    #
+    # Default:
+    #   - (macOS) Menlo
+    #   - (Linux/BSD) monospace
+    #   - (Windows) Consolas
+    family: 'Operator Mono'
+
+    # The `style` can be specified to pick a specific face.
+    style: Light 
+
+  # Bold font face
+  bold:
+    # Font family
+    #
+    # If the bold family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: 'Operator Mono'
+
+    # The `style` can be specified to pick a specific face.
+    #style: Bold
+
+  # Italic font face
+  italic:
+    # Font family
+    #
+    # If the italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: 'Operator Mono'
+
+    # The `style` can be specified to pick a specific face.
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    # Font family
+    #
+    # If the bold italic family is not specified, it will fall back to the
+    # value specified for the normal font.
+    family: 'Operator Mono'
+
+    # The `style` can be specified to pick a specific face.
+    style: Bold Italic
+
+  # Point size
+  size: 12.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  offset:
+    x: 0
+    y: 0
+
+# Colors
+#import: ~/.config/alacritty/themes/solarized-dark.yml
+# Colors (Panda)
+colors:
+  primary:
+    background: '#292A2B'
+    foreground: '#E6E6E6'
+
+  normal:
+    black:   '#292A2B'
+    red:     '#FF2C6D'
+    green:   '#19f9d8'
+    yellow:  '#FFB86C'
+    blue:    '#45A9F9'
+    magenta: '#FF75B5'
+    cyan:    '#67d3c2'
+    orange:  '#B084EB'
+    white:   '#E6E6E6'
+  bright:
+    black:   '#292A2B'
+    red:     '#FF2C6D'
+    green:   '#19f9d8'
+    yellow:  '#ffcc95'
+    blue:    '#6FC1FF'
+    magenta: '#FF9AC1'
+    cyan:    '#67d3c2'
+    white:   '#ffffff'
+
+shell:
+    program: /bin/zsh
