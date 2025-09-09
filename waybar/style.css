@@ -1,0 +1,32 @@
+@define-color foreground #eeddee;
+@define-color foreground-inactive #aa88aa;
+@define-color background #2a1a2a;
+
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    padding-left: 0.7em;
+}
+
+#workspaces button.empty {
+    color: @foreground-inactive;
+}
+
+#pulseaudio,
+#battery,
+#language,
+#network,
+#bluetooth {
+    padding-right: 1em 
+}
