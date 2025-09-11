@@ -1,0 +1,73 @@
+@import "colors/everforest.css";
+
+* {
+    font-family: SF Pro, FontAwesome;
+    font-size: 18px;
+}
+
+window#waybar {
+    background-color: @fg;
+    color: @bg0;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 0px 0px 15px 15px;
+    transition-duration: .5s;
+
+    border-bottom-width: 5px;
+    border-bottom-color: #7d6a40;
+    border-bottom-style: solid;
+}
+
+#clock,
+#clock-date,
+#pulseaudio,
+#network,
+#bluetooth,
+#language {
+    background-color: @bg0;
+    color: @fg;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 7px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+
+    border-bottom-width: 5px;
+    border-bottom-color: #161a1d;
+    border-bottom-style: solid;
+}
+
+#workspaces {
+    padding: 0px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    padding-left: 23px;
+}
+
+#workspaces button.active {
+    background-color: @blue;
+    color: @bg0;
+
+    border-radius: 10px;
+
+    border-bottom-width: 5px;
+    border-bottom-color: #366660;
+    border-bottom-style: solid;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#language {
+  background-color: @green;
+  color: @bg0;
+  border-bottom-color: #556a35;
+
+  margin-right: 15px;
+  padding-left: 20px;
+  padding-right: 23px;
+}
+

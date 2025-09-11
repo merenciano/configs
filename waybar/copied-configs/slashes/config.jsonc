@@ -1,5 +1,4 @@
 [
-  /*
   {
     // INDICATOR BAR //
     "layer": "top",
@@ -19,14 +18,14 @@
       "exec": "~/.config/hypr/themes/Mocha/bat-pp.sh bar"
     }
   },
-  */
+
   {
     // MAIN BAR //
     "layer": "top",
     "position": "top",
     "name": "main",
 
-    "margin-top": 6,
+    "margin-top": -41,
     "margin-left": 24,
     "margin-right": 24,
 
@@ -37,20 +36,17 @@
       "hyprland/workspaces",
       "custom/spacer2",
       "custom/spacer3",
-      "hyprland/submap"
-    ],
-
-    "modules-center": [
+      "hyprland/submap",
       "hyprland/window"
     ],
 
     "modules-right": [
       "custom/spacer1",
-      //"cpu",
-      //"temperature",
-      //"custom/nvidia",
+      "cpu",
+      "temperature",
+      "custom/nvidia",
       // "memory#ram",
-      //"group/storage",
+      "group/storage",
       // "memory#swap",
       // "disk",
       "network#info",
@@ -60,7 +56,7 @@
       "custom/spacer1",
       "hyprland/language",
       "backlight",
-      //"custom/battery",
+      "custom/battery",
       "custom/spacer1",
       "custom/weather",
       "clock"
@@ -138,7 +134,7 @@
 
     "clock": {
       "interval": 1,
-      "format": " {:%H:%M    %d/%m/%Y}",
+      "format": " {:%H:%M:%S    %d.%m}",
       "tooltip-format": "{:%d.%m.%Y   Week %W}\n\n<tt><small>{calendar}</small></tt>",
       "calendar": {
         "mode": "month",
@@ -153,7 +149,7 @@
           "today": "<span color='#f5e0dc'><b><u>{}</u></b></span>"
         }
       },
-      "on-click": "vivaldi --app=https://calendar.google.com & aplay ~/.config/sounds/interact.wav"
+      "on-click": "chromium --app=https://calendar.google.com & aplay ~/.config/sounds/interact.wav"
     },
 
     "cpu": {
@@ -166,7 +162,10 @@
     },
 
     "hyprland/language": {
-      "format": " {short}",
+      "format": " {}",
+      "format-fi": "Vittu",
+      "format-ru": "Блять",
+      "min-length": 7,
       "on-click": "hyprctl switchxkblayout current next & aplay ~/.config/sounds/interact.wav",
       "tooltip": false,
       "class": "language"
@@ -193,9 +192,9 @@
     "network#info": {
       "interval": 2,
       "format": "󱘖  Offline",
-      "format-wifi": "{icon}",
+      "format-wifi": "{icon} {bandwidthDownBits}",
       "format-ethernet": "󰈀 {bandwidthDownBits}",
-      //"min-length": 11,
+      "min-length": 11,
       "tooltip": "{}",
       "tooltip-format-wifi": "{ifname}\n{essid}\n{signalStrength}% \n{frequency} GHz\n󰇚 {bandwidthDownBits}\n󰕒 {bandwidthUpBits}",
       "tooltip-format-ethernet": "{ifname}\n󰇚 {bandwidthDownBits} \n󰕒 {bandwidthUpBits}",
@@ -212,7 +211,7 @@
       "format-wifi": "󰕒 {bandwidthUpBits}",
       "format-ethernet": "󰕒 {bandwidthUpBits}",
       "format-disconnected": " ",
-      //"min-length": 11
+      "min-length": 11
     },
 
     "network#down": {
@@ -220,7 +219,7 @@
       "format": "󰇚 {bandwidthDownBits}",
       "format-wifi": "󰇚 {bandwidthDownBits}",
       "format-ethernet": "󰇚 {bandwidthDownBits}",
-      //"min-length": 11
+      "min-length": 11
     },
 
     "hyprland/submap": {
@@ -315,11 +314,10 @@
     "custom/trayicon": {
       // "format": "",
       // "format": "Zäni",
-      "format": "󰣇",
-     // "format": "",
-      "tooltip": true,
-      "tooltip-format": "i use arch btw",
-      "on-click": "foot --title system-update bash -c 'sudo pacman -Syu'"
+      // "format": "󰣇",
+      "format": "",
+      "tooltip": false,
+      "on-click": "aplay /home/jan-aarela/.config/sounds/pacman.wav> /dev/null 2>/dev/null & kitty --title Pacman fish -c '~/.config/fish/Pacman.sh & sudo pacman -Syu'"
     }
   }
 ]

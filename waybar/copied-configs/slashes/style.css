@@ -46,7 +46,7 @@
 #waybar.main {
   background: transparent;
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 15pt;
+  font-size: 10pt;
   font-weight: 500;
 }
 
@@ -126,8 +126,8 @@
 }
 
 #waybar.main #network.info {
-  /* padding-right: 10px; */
-  /* padding-left: 10px; */
+  padding-right: 10px;
+  padding-left: 10px;
   color: @caution;
   background: transparent;
 }
@@ -135,12 +135,12 @@
 #waybar.main #network.info.wifi.normal,
 #waybar.main #network.info.ethernet {
   color: @performance;
-  /* padding-right: 15px; */
+  padding-right: 15px;
 }
 
 #waybar.main #network.info.wifi {
   color: @warning;
-  /* padding-right: 15px; */
+  padding-right: 15px;
 } /* }}} */
 
 /* Submap */ /* {{{ */
